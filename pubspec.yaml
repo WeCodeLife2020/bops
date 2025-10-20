@@ -1,0 +1,96 @@
+name: bops_mobile
+description: "A new Flutter project."
+publish_to: 'none'
+
+
+version: 1.0.1+15
+
+environment:
+  sdk: ^3.5.1
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.8
+  dio: ^5.7.0
+  hive: ^2.2.3
+  validators: ^3.0.0
+  change_app_package_name: ^1.4.0
+  flutter_svg: ^2.0.10+1
+  animated_custom_dropdown: ^3.1.1
+  cached_network_image: ^3.4.1
+  camera: ^0.11.0+2
+  google_mlkit_text_recognition: ^0.13.1
+  table_calendar: ^3.1.2
+  slider_button: ^2.1.0
+  device_info_plus: ^11.1.1
+  flutter_native_splash: ^2.4.1
+  flutter_launcher_icons: ^0.14.1
+  firebase_core: ^3.6.0
+  google_sign_in: ^6.2.1
+  firebase_auth: ^5.3.1
+  cloud_firestore: ^5.4.4
+  firebase_core_platform_interface: ^5.3.0
+  lottie: ^3.1.2
+  firebase_messaging: ^15.1.3
+  flutter_animate: ^4.5.0
+  path_provider: ^2.1.4
+  permission_handler: ^11.3.1
+  external_path: ^2.0.1
+  cherry_toast: ^1.11.0
+#  device_preview: ^1.2.0
+  intl: ^0.19.0
+  flutter_file_downloader: ^2.0.0
+  url_launcher: ^6.3.1
+  awesome_notifications: ^0.9.3+1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/app_icon3.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/images/app_icon3.jpg"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+
+
+  flutter_lints: ^4.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/lottie/
+
+
+  fonts:
+    - family: GothamBook
+      fonts:
+        - asset: assets/fonts/GothamBook.ttf
+    - family: GothamBold
+      fonts:
+        - asset: assets/fonts/GothamBold.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+
+
+

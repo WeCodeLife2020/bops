@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "935273390939",
+    "project_id": "bops-13b80",
+    "storage_bucket": "bops-13b80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935273390939:android:dc775b46b89f0c8be3307e",
+        "android_client_info": {
+          "package_name": "com.wecodelife.bops"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN9Ec0kgbk-StYS-i55katTbUmsxE26Zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
