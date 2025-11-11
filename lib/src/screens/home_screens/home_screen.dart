@@ -34,6 +34,7 @@ import 'package:bops_mobile/src/widgets/build_home_screen_header_punch_button_wi
 import 'package:bops_mobile/src/widgets/build_homepage_item_list_widget.dart';
 import 'package:bops_mobile/src/widgets/build_homescreen_bottom_sheet_widget.dart';
 import 'package:bops_mobile/src/widgets/build_lottie_loading_widget.dart';
+import 'package:bops_mobile/src/widgets/build_slider_button_widget.dart';
 import 'package:bops_mobile/src/widgets/build_svg_icon.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -659,6 +660,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      drawerEnableOpenDragGesture: false,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: AppColors.lightModeScaffoldColor,
       drawer: BuildHomeScreenDrawerWidget(
         backgroundColor: AppColors.lightModeScaffoldColor,
@@ -916,8 +919,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                           itemCount: tickets.length,
                                           itemBuilder: (BuildContext context,
                                               int index) {
+
                                             /// statuses are requested, parked, checkedin, checkedout
-                                            return BuildHomepageItemListWidget(
+                                            return  BuildHomepageItemListWidget(
                                               requestedTime: tickets[index]
                                                           .requestedTime !=
                                                       null

@@ -7,6 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:google_sign_in_platform_interface/google_sign_in_platform_interface.dart';
 
 import '../models/center_response_model.dart';
 import '../models/driver_response_model.dart';
@@ -14,19 +15,29 @@ import '../models/driver_response_model.dart';
 class FirebaseServices {
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn _googleSignIn = GoogleSignIn.instance;
+
+  Future<void> initializeGoogleSignIn() async {
+    await GoogleSignInPlatform.instance.init(
+      const InitParameters(
+        serverClientId: '935273390939-qhfi3uh9f40kuq4m5ijpo593m88g535l.apps.googleusercontent.com',
+      ),
+    );
+  }
 
   /// for google sign in
   Future<UserCredential?> signInWithGoogle() async {
+
     try {
-      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      await initializeGoogleSignIn();
+      final GoogleSignInAccount? googleUser = await _googleSignIn.authenticate();
 
       if (googleUser != null) {
         final GoogleSignInAuthentication googleAuth =
             await googleUser.authentication;
 
         final credential = GoogleAuthProvider.credential(
-          accessToken: googleAuth.accessToken,
+          accessToken: googleAuth.idToken,
           idToken: googleAuth.idToken,
         );
 

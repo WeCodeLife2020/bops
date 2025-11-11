@@ -1,3 +1,5 @@
+// Top-level build file for Flutter projects (modern format)
+
 allprojects {
     repositories {
         google()
@@ -8,8 +10,6 @@ allprojects {
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
     project.evaluationDependsOn(":app")
 }
 
